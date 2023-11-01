@@ -36,3 +36,56 @@
     transform: rotate(360deg);
   }
 }
+.row{
+  color: red;
+  
+  justify-content: center;
+}
+.row1{
+  color: rgb(199, 192, 192);
+  
+  justify-content: center;
+}
+.card_body{
+  
+  text-align: center;
+  margin-top: 110px;
+  font-size: 100px;
+}
+.timeZone_title{
+  font-size: 50px;
+
+}
+.link1{
+  font-size: 30px;
+  color: aliceblue;
+  margin-right: 30px;
+  text-decoration: none;
+  width: 50px;
+}
+
+
+
+.link1:hover,.link1:focus{
+  background-color: #c5cdd1; 
+            color: #26c8e1; 
+}
+.stopwatch{
+  margin-top: 50px;
+  height: 400px;
+  text-align: center;
+  align-items: center;
+  padding: 20px;
+  background-color: #282c34;
+  border-color: #26c8e1;
+  
+}
+.stopWatch_title{
+ margin-top: 100px;
+ font-size: 50px;
+ color:aqua;
+
+}
+.pagination{
+  justify-content: center;
+}
