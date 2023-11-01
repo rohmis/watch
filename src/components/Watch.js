@@ -32,11 +32,12 @@ export default function Watch() {
   const handlePageChange = (pageNumber) => {
     setPage(pageNumber - 1);
   };
+  const start = page * zonesPerPage;
+  const end = (page + 1) * zonesPerPage;
+  const zonesToDisplay = all.slice(start, end);
 
   const renderTimeZones = () => {
-    const start = page * zonesPerPage;
-    const end = (page + 1) * zonesPerPage;
-    const zonesToDisplay = all.slice(start, end);
+ 
 
     return zonesToDisplay.map((zone) => (
       <Button
@@ -80,17 +81,17 @@ export default function Watch() {
           <Row className="pagination">
             <Pagination style={{ marginTop: "20px"}}>
               <Stack direction="horizontal" gap={2}>
-                <Button onClick={handlePrevPage} variant="primary">Prev</Button>
+                <Button onClick={handlePrevPage} variant="primary" className="display" disabled={page===0} >Prev</Button>
                 {visiblePages.map((pageNumber) => (
                   <Pagination.Item
                     key={pageNumber}
-                    // active={pageNumber === page + 1}
+                    active={pageNumber === page + 1}
                     onClick={() => handlePageChange(pageNumber)}
                   >
                     {pageNumber}
                   </Pagination.Item>
                 ))}
-                <Button onClick={handleNextPage} variant="primary">Next</Button>
+                <Button onClick={handleNextPage} variant="primary" className="display" disabled={end >= all.length} >Next</Button>
               </Stack>
             </Pagination>
           </Row>

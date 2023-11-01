@@ -89,3 +89,6 @@
 .pagination{
   justify-content: center;
 }
+.display:disabled{
+  display: none;
+}
